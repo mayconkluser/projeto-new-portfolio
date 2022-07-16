@@ -1,0 +1,17 @@
+.footer {
+  background: linear-gradient(180deg, #112233 51.29%, #161b20 100%);
+  color: #c3ced9;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.footer-container p img {
+  width: 130px;
+}

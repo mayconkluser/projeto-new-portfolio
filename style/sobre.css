@@ -1,0 +1,16 @@
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sobre-p {
+  color: #0b0d0f;
+  font-size: 1.125rem;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.sobre-img {
+  justify-self: end;
+}

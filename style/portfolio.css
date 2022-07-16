@@ -1,0 +1,133 @@
+.portfolio-h2 {
+  text-align: right;
+}
+
+.portfolio {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.portfolio-container-box {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 32px;
+}
+
+.portfolio-box {
+  width: 300px;
+  height: 380px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(11, 13, 15, 0.1);
+  position: relative;
+  transition: 0.3s;
+}
+
+.portfolio-img img {
+  border-radius: 5px;
+}
+
+.portfolio-conteudo {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  border-top: 5px solid #fc753f;
+  transition: 0.3s;
+  /* background: #112233; */
+  background: rgba(11, 13, 15, 0.8);
+}
+
+.portfolio-conteudo h3 {
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s;
+  border-radius: 0 0 5px 5px;
+  color: #c3ced9;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.portfolio-conteudo h3::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../img/seta-cima.svg");
+}
+
+.portfolio-conteudo h3:hover {
+  transition: 0.3s;
+  font-size: 0.875rem;
+  padding: 16px 16px 32px 16px;
+}
+
+/* ativo */
+.portfolio-conteudo.ativo {
+  height: 100%;
+  border-radius: 5px;
+}
+.portfolio-conteudo.ativo h3 {
+  font-size: 0.875rem;
+  padding: 16px 16px 16px 16px;
+}
+.portfolio-conteudo.ativo h3::after {
+  background: url("../img/seta-baixo.svg");
+}
+/* ----- */
+
+.portfolio-conteudo-aberto {
+  color: #c3ced9;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  margin-top: 16px;
+  position: relative;
+}
+
+.portfolio-conteudo-aberto h4 {
+  text-align: center;
+}
+
+.portfolio-container-ferramentas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  max-width: 200px;
+  gap: 16px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+.portfolio-ferramentas-box {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.portfolio-link {
+  text-align: center;
+  position: relative;
+  bottom: -60px;
+}
+
+.portfolio-link a {
+  color: #c3ced9;
+  transition: 0.3s;
+  border-bottom: 1px solid #c3ced9;
+  font-size: 0.875rem;
+}
+.portfolio-link a:hover {
+  color: #0055cc;
+  border-bottom: 1px solid #0055cc;
+}
+
+.portfolio-link p {
+  color: #c3ced9;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}

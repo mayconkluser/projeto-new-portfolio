@@ -1,0 +1,92 @@
+.contato {
+  width: 940px;
+  margin: 0 auto;
+  padding-bottom: 64px;
+  font-family: "Inter", sans-serif;
+  color: #112233;
+  font-size: 0.875rem;
+}
+.contato-h2 {
+  text-align: center;
+}
+.contato-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.form {
+  border-right: 1px solid #d9d9d9;
+  padding-right: 32px;
+}
+
+.form label {
+  font-weight: 700;
+}
+
+.form textarea,
+.form input {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(11, 13, 15, 0.08);
+  font-size: 0.875rem;
+  background: #e4e8ed;
+}
+
+.form input {
+  margin-bottom: 16px;
+  margin-top: 4px;
+}
+
+.form textarea {
+  resize: vertical;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  background: linear-gradient(180deg, #ff9122 0%, #ff6b0e 100%);
+  border-radius: 4px;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(11, 13, 15, 0.25);
+}
+
+.contato-div,
+.endereco-div {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 16px;
+  max-width: 300px;
+}
+
+.contato-div h3,
+.endereco-div h3 {
+  padding-bottom: 8px;
+}
+
+.contato-div li + li,
+.endereco-div p + p {
+  display: block;
+  padding: 4px 0;
+}
+
+.endereco-div {
+  padding-top: 16px;
+}
+
+.social-div li {
+  padding-top: 16px;
+  display: inline-block;
+  padding-right: 16px;
+}

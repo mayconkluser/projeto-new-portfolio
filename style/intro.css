@@ -1,0 +1,57 @@
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 64px;
+}
+
+.divisor {
+  display: block;
+  width: 100%;
+  max-width: 780px;
+  height: 1px;
+  background: #c3ced9;
+  margin: 64px auto;
+}
+
+.cargo-dev,
+.nome-dev,
+.local-dev {
+  font-family: "IBM Plex Mono", monospace;
+  color: #0b0d0f;
+}
+
+.cargo-dev {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 12ch;
+}
+
+.cargo-dev-1,
+.cargo-dev-2 {
+  color: #0033bb;
+}
+
+.cargo-dev-1::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  max-width: 262px;
+  height: 3px;
+  background: #c3ced9;
+}
+
+.nome-dev {
+  font-size: 1.5rem;
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+.local-dev {
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
