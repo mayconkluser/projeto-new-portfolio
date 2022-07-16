@@ -41,8 +41,8 @@
   display: flex;
   width: 100%;
   max-width: 262px;
-  height: 3px;
-  background: #c3ced9;
+  height: 2px;
+  background: #ff9933;
 }
 
 .nome-dev {

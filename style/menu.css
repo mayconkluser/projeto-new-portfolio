@@ -7,18 +7,36 @@
   max-width: 1280px;
 }
 
-.navegacao {
+.navegacao ul {
   display: flex;
   font-family: "Inter", sans-serif;
   align-items: center;
 }
 
-.navegacao a {
-  font-size: 1rem;
+.navegacao ul li {
   display: flex;
   align-items: center;
+
+  transition: 0.3s;
+}
+
+.navegacao ul li a {
   color: #0b0d0f;
   padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.navegacao ul li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: #ff9933;
+  transition: 0.3s;
+}
+
+.navegacao li a:hover::after {
+  width: 100%;
 }
 
 .ponto-menu {
