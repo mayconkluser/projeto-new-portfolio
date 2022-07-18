@@ -115,6 +115,8 @@
 .portfolio-conteudo-aberto h4 {
   text-align: center;
   padding-top: 32px;
+  color: #f0f4f7;
+  text-transform: uppercase;
 }
 /* ferramentas ------------------------------*/
 .portfolio-container-ferramentas {
@@ -131,6 +133,7 @@
   display: grid;
   justify-items: center;
   gap: 8px;
+  color: #c3ced9;
 }
 /* link ------------------------------*/
 .portfolio-link {
@@ -139,10 +142,10 @@
 }
 
 .portfolio-link a {
-  color: #c3ced9;
   transition: 0.3s;
-  border-bottom: 1px solid #c3ced9;
   font-size: 0.875rem;
+  color: #33bbff;
+  border-bottom: 1px solid #33bbff;
 }
 .portfolio-link a:hover {
   color: #0055cc;
@@ -150,7 +153,12 @@
 }
 
 .portfolio-link p {
-  color: #c3ced9;
+  color: #ff9933;
   font-size: 0.75rem;
   margin-top: 4px;
+}
+
+.portfolio-ferramentas-box svg path {
+  fill: #ff9933;
+  opacity: 0.7;
 }
