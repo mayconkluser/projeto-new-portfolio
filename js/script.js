@@ -1,3 +1,3 @@
-import initScrollMenuSuave from "./modulo/menu-scroll-suave.js";
+import initMenuScrollSuave from "./modulo/menu-scroll-suave.js";
 
-initScrollMenuSuave();
+initMenuScrollSuave();

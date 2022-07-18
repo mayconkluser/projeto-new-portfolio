@@ -1,4 +1,4 @@
-export default function initScrollMenuSuave() {
+export default function initMenuScrollSuave() {
   const linksMenu = document.querySelectorAll('.js-menu a[href^="#"]');
 
   function scrollParaSection(event) {
@@ -8,7 +8,7 @@ export default function initScrollMenuSuave() {
 
     section.scrollIntoView({
       behavior: "smooth",
-      block: "center",
+      block: "start",
     });
   }
 
