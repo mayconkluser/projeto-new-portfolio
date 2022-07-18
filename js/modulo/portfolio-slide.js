@@ -20,24 +20,38 @@ export default class PortfolioSlide {
   }
 
   comecarEvento(event) {
-    event.preventDefault();
-    this.distancias.inicioX = event.clientX;
-    this.ulPortfolio.addEventListener("mousemove", this.quandoMover);
+    let tipoDeMovimento;
+    if (event.type === "mousedown") {
+      event.preventDefault();
+      this.distancias.inicioX = event.clientX;
+      tipoDeMovimento = "mousemove";
+    } else {
+      this.distancias.inicioX = event.changedTouches[0].clientX;
+      tipoDeMovimento = "touchmove";
+    }
+    this.ulPortfolio.addEventListener(tipoDeMovimento, this.quandoMover);
   }
 
   terminarEvento(event) {
-    this.ulPortfolio.removeEventListener("mousemove", this.quandoMover);
+    const tipoMovimento = event.type === "mouseup" ? "mousemove" : "touchmove";
+    this.ulPortfolio.removeEventListener(tipoMovimento, this.quandoMover);
     this.distancias.posicaoFinal = this.distancias.posicaoDoMovimento;
   }
 
   quandoMover(event) {
-    const posicaoFinal = this.atualizarPosicao(event.clientX);
+    const posicaoInicial =
+      event.type === "mousemove"
+        ? event.clientX
+        : event.changedTouches[0].clientX;
+    const posicaoFinal = this.atualizarPosicao(posicaoInicial);
     this.moverEvento(posicaoFinal);
   }
 
   adicionarEventoSlide() {
     this.ulPortfolio.addEventListener("mousedown", this.comecarEvento);
+    this.ulPortfolio.addEventListener("touchstart", this.comecarEvento);
     this.ulPortfolio.addEventListener("mouseup", this.terminarEvento);
+    this.ulPortfolio.addEventListener("touchend", this.terminarEvento);
   }
 
   eventosBind() {

@@ -20,7 +20,7 @@ ul {
   list-style: none;
 }
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -31,4 +31,7 @@ ul {
   font-family: "IBM Plex Mono", monospace;
   text-transform: uppercase;
   margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
 }
