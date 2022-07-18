@@ -46,3 +46,8 @@
   border-radius: 50%;
   background: #0033bb;
 }
+
+@media (max-width: 768px) {
+  .navegacao ul {
+  }
+}
