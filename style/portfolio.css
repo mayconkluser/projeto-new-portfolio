@@ -1,5 +1,6 @@
 .portfolio-h2 {
   text-align: right;
+  margin: 0;
 }
 
 .portfolio {
@@ -13,6 +14,8 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 32px;
+  padding-top: 32px;
+  overflow: hidden;
 }
 
 .portfolio-box {
