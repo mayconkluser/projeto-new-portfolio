@@ -20,24 +20,38 @@ export default class PortfolioSlide {
   }
 
   onStart(event) {
-    event.preventDefault();
-    this.dist.startX = event.clientX;
-    this.containerSlide.addEventListener("mousemove", this.onMove);
+    let movetype;
+    if (event.type === "mousedown") {
+      event.preventDefault();
+      this.dist.startX = event.clientX;
+      movetype = "mousemove";
+    } else {
+      this.dist.startX = event.changedTouches[0].clientX;
+      movetype = "touchmove";
+    }
+    this.containerSlide.addEventListener(movetype, this.onMove);
   }
 
   onMove(event) {
-    const finalPosition = this.updatePosition(event.clientX);
+    const poiterPosition =
+      event.type === "mousemove"
+        ? event.clientX
+        : event.changedTouches[0].clientX;
+    const finalPosition = this.updatePosition(poiterPosition);
     this.moveSlide(finalPosition);
   }
 
   onEnd(event) {
-    this.containerSlide.removeEventListener("mousemove", this.onMove);
+    const movetype = event.type === "mouseup" ? "mousemove" : "touchmove";
+    this.containerSlide.removeEventListener(movetype, this.onMove);
     this.dist.finalPosition = this.dist.movePosition;
   }
 
   addSlideEvents() {
     this.containerSlide.addEventListener("mousedown", this.onStart);
+    this.containerSlide.addEventListener("touchstart", this.onStart);
     this.containerSlide.addEventListener("mouseup", this.onEnd);
+    this.containerSlide.addEventListener("touchend", this.onEnd);
   }
 
   bindEvents() {
