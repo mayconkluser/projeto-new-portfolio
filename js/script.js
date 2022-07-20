@@ -4,4 +4,4 @@ import PortfolioSlide from "./modulo/portfolio-slide.js";
 initMenuScrollSuave();
 const portfolioSlide = new PortfolioSlide(".slide", ".container-slide");
 portfolioSlide.init();
-console.log(portfolioSlide);
+// console.log(portfolioSlide);
