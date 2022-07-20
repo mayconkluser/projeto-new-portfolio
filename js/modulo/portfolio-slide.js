@@ -1,68 +1,38 @@
 export default class PortfolioSlide {
-  constructor(divPortfolio, ulPortfolio) {
-    this.divPortfolio = document.querySelector(divPortfolio);
-    this.ulPortfolio = document.querySelector(ulPortfolio);
-    this.distancias = {
-      posicaoFinal: 0,
-      inicioX: 0,
-      totalMovimento: 0,
-    };
+  constructor(slide, containerSlide) {
+    this.slide = document.querySelector(slide);
+    this.containerSlide = document.querySelector(containerSlide);
   }
 
-  moverEvento(distanciaX) {
-    this.distancias.posicaoDoMovimento = distanciaX;
-    this.divPortfolio.style.transform = `translate3d(${distanciaX}px,0,0)`;
+  onStart(event) {
+    event.preventDefault();
+    this.containerSlide.addEventListener("mousemove", this.onStart);
+    console.log("mousemove");
   }
 
-  atualizarPosicao(clientX) {
-    this.distancias.totalMovimento = (this.distancias.inicioX - clientX) * 1.6;
-    return this.distancias.posicaoFinal - this.distancias.totalMovimento;
+  onMove(event) {
+    console.log("movendo");
   }
 
-  comecarEvento(event) {
-    let tipoDeMovimento;
-    if (event.type === "mousedown") {
-      event.preventDefault();
-      this.distancias.inicioX = event.clientX;
-      tipoDeMovimento = "mousemove";
-    } else {
-      this.distancias.inicioX = event.changedTouches[0].clientX;
-      tipoDeMovimento = "touchmove";
-    }
-    this.ulPortfolio.addEventListener(tipoDeMovimento, this.quandoMover);
+  onEnd(event) {
+    this.containerSlide.removeEventListener("mousemove", this.onStart);
+    console.log("mouseup");
   }
 
-  terminarEvento(event) {
-    const tipoMovimento = event.type === "mouseup" ? "mousemove" : "touchmove";
-    this.ulPortfolio.removeEventListener(tipoMovimento, this.quandoMover);
-    this.distancias.posicaoFinal = this.distancias.posicaoDoMovimento;
+  addSlideEvents() {
+    this.containerSlide.addEventListener("mousedown", this.onStart);
+    this.containerSlide.addEventListener("mouseup", this.onEnd);
   }
 
-  quandoMover(event) {
-    const posicaoInicial =
-      event.type === "mousemove"
-        ? event.clientX
-        : event.changedTouches[0].clientX;
-    const posicaoFinal = this.atualizarPosicao(posicaoInicial);
-    this.moverEvento(posicaoFinal);
+  bindEvents() {
+    this.onStart = this.onStart.bind(this);
+    this.onMove = this.onMove.bind(this);
+    this.onEnd = this.onEnd.bind(this);
   }
 
-  adicionarEventoSlide() {
-    this.ulPortfolio.addEventListener("mousedown", this.comecarEvento);
-    this.ulPortfolio.addEventListener("touchstart", this.comecarEvento);
-    this.ulPortfolio.addEventListener("mouseup", this.terminarEvento);
-    this.ulPortfolio.addEventListener("touchend", this.terminarEvento);
-  }
-
-  eventosBind() {
-    this.comecarEvento = this.comecarEvento.bind(this);
-    this.quandoMover = this.quandoMover.bind(this);
-    this.terminarEvento = this.terminarEvento.bind(this);
-  }
-
-  iniciarEvento() {
-    this.eventosBind();
-    this.adicionarEventoSlide();
+  init() {
+    this.bindEvents();
+    this.addSlideEvents();
     return this;
   }
 }
