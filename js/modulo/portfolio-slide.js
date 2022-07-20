@@ -60,9 +60,43 @@ export default class PortfolioSlide {
     this.onEnd = this.onEnd.bind(this);
   }
 
+  // slide config
+
+  slidePosition(slide) {
+    const margin = (this.containerSlide.offsetWidth - slide.offsetWidth) / 2;
+    return -(slide.offsetLeft - margin);
+  }
+
+  slidesConfg() {
+    this.slideArray = [...this.slide.children].map((item) => {
+      const position = this.slidePosition(item);
+      return {
+        position,
+        item,
+      };
+    });
+  }
+
+  slidesIndexNav(index) {
+    const last = this.slideArray.length - 1;
+    this.index = {
+      prev: index ? index - 1 : undefined,
+      active: index,
+      next: index === last ? undefined : index + 1,
+    };
+  }
+
+  changeSlide(index) {
+    const activeSlide = this.slideArray[index];
+    this.moveSlide(activeSlide.position);
+    this.slidesIndexNav(index);
+    this.dist.finalPosition = activeSlide.position;
+  }
+
   init() {
     this.bindEvents();
     this.addSlideEvents();
+    this.slidesConfg();
     return this;
   }
 }
