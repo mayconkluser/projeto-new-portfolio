@@ -1,3 +1,5 @@
+import debounce from "../debounce.js";
+
 export default class PortfolioSlide {
   constructor(slide, containerSlide) {
     this.slide = document.querySelector(slide);
@@ -7,6 +9,7 @@ export default class PortfolioSlide {
       startX: 0,
       movement: 0,
     };
+    this.activeClass = "active";
   }
   transition(active) {
     this.slide.style.transition = active ? "transform .3s" : "";
@@ -70,12 +73,6 @@ export default class PortfolioSlide {
     this.containerSlide.addEventListener("touchend", this.onEnd);
   }
 
-  bindEvents() {
-    this.onStart = this.onStart.bind(this);
-    this.onMove = this.onMove.bind(this);
-    this.onEnd = this.onEnd.bind(this);
-  }
-
   // slide config
 
   slidePosition(slide) {
@@ -107,6 +104,14 @@ export default class PortfolioSlide {
     this.moveSlide(activeSlide.position);
     this.slidesIndexNav(index);
     this.dist.finalPosition = activeSlide.position;
+    this.changeActive();
+  }
+
+  changeActive() {
+    this.slideArray.forEach((item) =>
+      item.item.classList.remove(this.activeClass)
+    );
+    this.slideArray[this.index.active].item.classList.add(this.activeClass);
   }
 
   activePrevSlide() {
@@ -117,11 +122,30 @@ export default class PortfolioSlide {
     if (this.index.next !== undefined) this.changeSlide(this.index.next);
   }
 
+  onResize() {
+    setTimeout(() => {
+      this.slidesConfg();
+      this.changeSlide(this.index.active);
+    }, 1000);
+  }
+
+  addResizeEvent() {
+    window.addEventListener("resize", this.onResize);
+  }
+
+  bindEvents() {
+    this.onStart = this.onStart.bind(this);
+    this.onMove = this.onMove.bind(this);
+    this.onEnd = this.onEnd.bind(this);
+    this.onResize = debounce(this.onResize.bind(this), 200);
+  }
+
   init() {
     this.bindEvents();
     this.transition(true);
     this.addSlideEvents();
     this.slidesConfg();
+    this.addResizeEvent();
     return this;
   }
 }

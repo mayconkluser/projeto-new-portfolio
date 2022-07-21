@@ -6,6 +6,10 @@
   display: flex;
 }
 
+.slide.hover {
+  will-change: transform;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -15,7 +19,15 @@ img {
   max-width: 800px;
   flex-shrink: 0;
   margin: 0 20px;
+  /* opacity: 0.8;
+  transform: scale(0.8);
+  transition: 0.4s; */
 }
+
+/* .slide li.active {
+  opacity: 1;
+  transform: scale(1);
+} */
 
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
