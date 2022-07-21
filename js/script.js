@@ -1,7 +1,7 @@
 import initMenuScrollSuave from "./modulo/menu-scroll-suave.js";
-import PortfolioSlide from "./modulo/portfolio-slide.js";
+import SlideNav from "./modulo/portfolio-slide.js";
 
 initMenuScrollSuave();
-const portfolioSlide = new PortfolioSlide(".slide", ".container-slide");
+const portfolioSlide = new SlideNav(".slide", ".container-slide");
 portfolioSlide.init();
-portfolioSlide.changeSlide(5);
+portfolioSlide.addArrow(".prev", ".next");
