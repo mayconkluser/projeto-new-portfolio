@@ -6,4 +6,4 @@ const portfolioSlide = new SlideNav(".slide", ".container-slide");
 portfolioSlide.init();
 portfolioSlide.addArrow(".prev", ".next");
 
-portfolioSlide.addControl();
+portfolioSlide.addControl(".custom-control");
