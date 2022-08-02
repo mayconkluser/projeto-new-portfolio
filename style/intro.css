@@ -55,3 +55,40 @@
   font-weight: 400;
   margin-top: 0.5rem;
 }
+
+@media (max-width: 1024px) {
+  .cargo-dev {
+    font-size: 2.5rem;
+  }
+  .intro {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+    margin-top: 32px;
+  }
+  .cargo-dev {
+    max-width: 100%;
+    display: block;
+  }
+  .intro-texto {
+    text-align: center;
+  }
+  .cargo-dev-1::after {
+    display: none;
+  }
+  .cargo-dev-1 {
+    border-bottom: 3px solid #ff9933;
+  }
+  .cargo-dev-2 {
+    display: block;
+    padding-top: 8px;
+  }
+}
