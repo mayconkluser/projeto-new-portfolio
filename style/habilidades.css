@@ -19,7 +19,7 @@
 }
 
 .habilidades-conteudo section {
-  max-width: 460px;
+  max-width: 600px;
   border-radius: 5px;
   padding: 32px;
   background: #112233;
@@ -56,15 +56,25 @@
 }
 
 .habilidades-conteudo h3 {
+  padding-bottom: 16px;
   font-size: 1.5rem;
 }
 
 .habilidade-conteudo-1 {
   color: #ff9933;
   font-size: 0.875rem;
+  padding-bottom: 8px;
   line-height: 1.5;
 }
 
+.tag-a {
+  color: #c3ced9;
+  transition: 0.3s;
+  border-bottom: 1px solid #ff9933;
+}
+.tag-a:hover {
+  color: #e4e8ed;
+}
 .habilidade-conteudo-2 {
   display: flex;
   justify-content: space-between;
@@ -103,4 +113,27 @@
 }
 .habilidades-conteudo ul li.ativo svg path {
   fill: #c3ced9;
+}
+
+.js .js-tabcontent section {
+  display: none;
+  margin-bottom: 10px;
+}
+.js-tabcontent section.ativo {
+  display: block !important;
+  animation: mostrar 0.8s forwards;
+}
+.js-tabmenu {
+  align-self: flex-start;
+}
+
+@keyframes mostrar {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
 }

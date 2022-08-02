@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Looma_Code</title>
 
+  <!-- caso o js esteja desabilitado -->
+  <script>
+    document.documentElement.className += ' js'
+  </script>
+
   <!-- style -->
   <link rel="stylesheet" href="./style/style.css">
 
@@ -79,7 +84,6 @@
     <div class="container">
       <h2 class="portfolio-h2 titulo-h2">Portfólio</h2>
     </div>
-
     <div class="portfolio">
       <ul class="custom-control">
         <li><img src="./img/img-experiencia/customControl.png" alt=""></li>
@@ -186,13 +190,14 @@
         <div class="formacao-box">
           <h3>Idiomas</h3>
           <ul class="formacao-lista">
-            <li>Inglês <span>Intermediário</span></li>
+            <li>Inglês <span>Básico</span></li>
           </ul>
           <h4>Autodidata</h4>
         </div>
       </div>
     </div>
   </section>
+
   <section id="habilidades" aria-label="Habilidades">
     <div class="container">
       <h2 class="habilidades-h2 titulo-h2">Habilidades</h2>
@@ -200,9 +205,7 @@
 
     <div class="habilidades">
       <div class="habilidades-conteudo">
-        <div class="habilidades-img"><img src="./img/mesa-computador.svg" alt="">
-        </div>
-        <ul>
+        <ul class="js-tabmenu">
           <li>
             <p>Figma</p>
             <svg width="25" height="38" viewBox="0 0 25 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -211,7 +214,7 @@
                 fill="#112233" />
             </svg>
           </li>
-          <li class="ativo">
+          <li class="">
             <p>Html</p>
             <svg width="33" height="37" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -243,24 +246,67 @@
                 fill="#112233" />
             </svg>
           </li>
-          <li>
-            <p>Bootstrap</p>
-            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M31.222 0.387939H6.79418C3.42423 0.399472 0.698951 3.1453 0.6875 6.53808V31.1398C0.6875 34.5211 3.43682 37.2899 6.79418 37.2899H31.222C34.5794 37.2899 37.3287 34.5211 37.3287 31.1398V6.53808C37.3287 3.15683 34.5794 0.387939 31.222 0.387939V0.387939ZM27.8819 26.3055C27.5773 27.0447 27.094 27.6986 26.4746 28.2037C25.8299 28.7261 25.0192 29.1586 24.0172 29.4653C23.021 29.7778 21.8347 29.9335 20.4572 29.9335H10.6405V8.4063H21.024C22.9443 8.4063 24.4833 8.83876 25.6341 9.7279C26.7975 10.617 27.37 11.9502 27.37 13.74C27.37 14.8275 27.1078 15.7523 26.5822 16.5204C26.0566 17.2884 25.2997 17.8835 24.3218 18.2987V18.3713C25.6284 18.6481 26.636 19.272 27.2979 20.2395C27.9597 21.2071 28.3055 22.4318 28.3055 23.9091C28.3055 24.7383 28.1441 25.5248 27.8464 26.2571L27.8819 26.2986V26.3055ZM23.6417 21.0018C23.021 20.4252 22.1382 20.1427 21.0057 20.1427H14.4032V26.8579H21.0229C22.1496 26.8579 23.0382 26.5638 23.6646 25.9687C24.2909 25.3737 24.6069 24.5272 24.6069 23.4455C24.5955 22.3822 24.2909 21.56 23.6646 21.0007H23.6348L23.6417 21.0018ZM22.729 16.6588C23.3313 16.1421 23.6291 15.4029 23.6291 14.4365C23.6291 13.3548 23.3611 12.5867 22.8183 12.1485C22.2813 11.7103 21.5061 11.482 20.487 11.482H14.3803V17.4222H20.487C21.3756 17.4222 22.1393 17.1581 22.7233 16.6599L22.729 16.6588Z"
-                fill="#112233" />
-            </svg>
-          </li>
         </ul>
-        <div class="habilidades-conteudo">
+        <div class="habilidades-section js-tabcontent">
           <section>
-            <h3>Html 5</h3>
-            <p class="habilidade-conteudo-1">HTML é uma linguagem de marcação utilizada na construção de páginas na Web.
-              Documentos HTML podem ser
-              interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML. HyTime é um
-              padrão para a representação estruturada de hipermídia e conteúdo baseado em tempo.</p>
-            <p class="habilidade-conteudo-2">HTML e CSS <span>46H</span></p>
+            <h3>Figma</h3>
+            <p class="habilidade-conteudo-1">Figma é um editor gráfico de vetor e prototipagem de projetos de design
+              baseado principalmente no navegador web.</p>
+
+            <p class="habilidade-conteudo-1">Com sua simplicidade, aprendi rapiadamente a manejar a ferramenta, podendo
+              elaborar templates para apresentar projetos, com clareza, assim ficando simples de
+              tirar duvidada e remanejar qualquer parte do site de forma rápida e simples, sem a nescidade de códigos.
+            </p>
+            <p class="habilidade-conteudo-2">UI Design <span>64h</span></p>
           </section>
+
+          <section>
+            <h3>Html</h3>
+            <p class="habilidade-conteudo-1">HTML é uma linguagem de marcação utilizada na construção de páginas na Web.
+            </p>
+            <p class="habilidade-conteudo-1">
+              Tenho conhecimento de uma boa parte das tags utilizadas para fazer uma
+              página bem otimizada e com uma boa
+              <a class="tag-a"
+                href="https://www.gov.br/governodigital/pt-br/acessibilidade-digital#:~:text=Acessibilidade%20Digital%20%C3%A9%20a%20elimina%C3%A7%C3%A3o,maneira%20efetiva%20com%20as%20p%C3%A1ginas."
+                target="_blank">Acessibilidade Digital</a>
+              .
+            </p>
+            <p class="habilidade-conteudo-2">HTML e CSS <span>46h</span></p>
+          </section>
+
+          <section>
+            <h3>JavaScript</h3>
+            <p class="habilidade-conteudo-1">JavaScript é uma linguagem de programação interpretada estruturada, de
+              script em alto nível com tipagem dinâmica fraca e multiparadigma. </p>
+            <p class="habilidade-conteudo-1">Pratico com uma grande frequência a linguagem, para poder fornecer aos meus
+              clientes uma página com boa temática, atribuindo, digamos, um poder a mais no seu site.</p>
+            <p class="habilidade-conteudo-2">JavaScript ES6+ <span>74h</span></p>
+          </section>
+
+          <section>
+            <h3>Css</h3>
+            <p class="habilidade-conteudo-1">Css é um mecanismo para adicionar estilo a um documento web.</p>
+            <p class="habilidade-conteudo-1">Tenho um bom conhecimento em posicionamento e responsividade na Web. Com
+              estas duas boas habilidades posso fornecer um bom estilo para seu site, com ótima qualidade, tanto no
+              Desktop
+              (computador) quanto no Mobile (celular e tablete).</p>
+            <p class="habilidade-conteudo-2">HTML e CSS (Flexbox e Grid Layout) <span>62h</span></p>
+
+          </section>
+
+          <section>
+            <h3>Git/Github</h3>
+            <p class="habilidade-conteudo-1">Git é um sistema de controle de versões distribuído,
+              usado principalmente no desenvolvimento de software.</p>
+            <p class="habilidade-conteudo-1">GitHub é uma plataforma de hospedagem de código-fonte e arquivos com
+              controle de versão usando o Git.</p>
+            <p class="habilidade-conteudo-1">Tenho um pequeno conhecimento com git/github, hospedo meus códigos na
+              plataforma, buscando criar Commits claros, assim praticando caso trabalhe em equipe. Utilizando a
+              hospedagem de página gratuita, para facilitar a aprecentação dos sites para meus cliente.</p>
+            <p class="habilidade-conteudo-2">JavaScript ES6+ (parte final do curso) <span>+H</span></p>
+          </section>
+
         </div>
       </div>
     </div>
@@ -277,7 +323,7 @@
           </div>
           <div>
             <label for="fone">Telefone:</label>
-            <input type="text" name="fone" id="fone" placeholder="(47) 99999-9999">
+            <input type="text" name="fone" id="fone" placeholder="(47) 9-9999-9999">
           </div>
           <div>
             <label for="email">E-mail:</label>
