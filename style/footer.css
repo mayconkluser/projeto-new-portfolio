@@ -15,3 +15,15 @@
 .footer-container p img {
   width: 130px;
 }
+
+.footer-container p {
+  display: flex;
+  position: relative;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.footer-container p span {
+  position: relative;
+  bottom: -3px;
+}
