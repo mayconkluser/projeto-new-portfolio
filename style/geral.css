@@ -72,8 +72,7 @@ ul {
 .up {
   transform: rotate(-135deg);
   position: relative;
-  bottom: -3px;
-  right: -1px;
+  bottom: -2px;
 }
 
 @media (max-width: 1024px) {
