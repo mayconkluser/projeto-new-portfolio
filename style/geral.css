@@ -6,6 +6,8 @@
 
 body {
   background: #f0f4f7;
+  position: relative;
+  scroll-behavior: smooth;
 }
 .fonts {
   font-family: "IBM Plex Mono", monospace;
@@ -39,6 +41,39 @@ ul {
   height: 1px;
   background: #c3ced9;
   margin: 0 auto;
+}
+
+#btnTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #ee2200;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#btnTop:hover {
+  opacity: 1;
+}
+.arrow {
+  border: solid #f0f4f7;
+  border-width: 0 7px 7px 0;
+  padding: 5px;
+  display: inline-block;
+}
+
+.up {
+  transform: rotate(-135deg);
+  position: relative;
+  bottom: -3px;
+  right: -1px;
 }
 
 @media (max-width: 1024px) {
