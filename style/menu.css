@@ -15,7 +15,6 @@
 .navegacao ul li {
   display: flex;
   align-items: center;
-
   transition: 0.3s;
 }
 
@@ -93,6 +92,8 @@
     background: none;
     cursor: pointer;
     gap: 0.5rem;
+    position: relative;
+    top: 7px;
   }
   #hamburguer {
     width: 20px;

@@ -15,7 +15,7 @@ img {
   display: block;
 }
 .slide li {
-  width: 40vw;
+  width: 60vw;
   max-width: 800px;
   flex-shrink: 0;
   margin: 20px;
@@ -91,11 +91,6 @@ img {
 .arrow-nav button {
   cursor: pointer;
   border: none;
-  /* border-radius: 4px;
-  color: white;
-  width: 100px;
-  height: 100px;
-  background: #0055cc url("../img/arrow.svg") center center no-repeat; */
 }
 
 .arrow-nav button.prev {
@@ -219,4 +214,44 @@ img {
   padding-top: 4px;
   font-size: 0.75rem;
   color: #c3ced9;
+}
+
+@media (max-width: 769px) {
+  .conteudo-slide {
+    opacity: 0.9;
+  }
+  .conteudo-slide h3 {
+    font-size: 1rem;
+  }
+
+  .conteudo-box p,
+  .conteudo-box p a {
+    font-size: 0.875rem;
+  }
+
+  .ferramentas-box h4 {
+    font-size: 0.875rem;
+  }
+
+  .ferramentas {
+    gap: 40px;
+  }
+  .content-ferramentas {
+    width: 20px;
+  }
+
+  .content-ferramentas span {
+    font-size: 0.75rem;
+    color: #c3ced9;
+  }
+  .slide li {
+    width: 80vw;
+  }
+  .custom-control {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .portfolio {
+    margin-bottom: 0px;
+  }
 }

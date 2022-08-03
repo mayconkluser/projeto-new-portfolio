@@ -6,15 +6,6 @@
   margin-top: 64px;
 }
 
-.divisor {
-  display: block;
-  width: 100%;
-  max-width: 780px;
-  height: 1px;
-  background: #c3ced9;
-  margin: 64px auto;
-}
-
 .cargo-dev,
 .nome-dev,
 .local-dev {

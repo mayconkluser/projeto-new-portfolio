@@ -33,5 +33,24 @@ ul {
   margin-bottom: 32px;
 }
 
-@media (max-width: 768px) {
+.divisor {
+  display: block;
+  width: 100%;
+  max-width: 780px;
+  height: 1px;
+  background: #c3ced9;
+  margin: 64px auto;
+}
+
+@media (max-width: 1024px) {
+  .titulo-h2 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 769px) {
+  .divisor {
+    max-width: 580px;
+    margin: 32px auto;
+  }
 }

@@ -1,6 +1,6 @@
 #formacao {
   background: #161b20;
-  width: 100%;
+  max-width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
   margin-bottom: 64px;
@@ -45,7 +45,9 @@
 .formacao-lista {
   display: grid;
   gap: 16px;
-  margin: 16px 0;
+}
+.padding-bottom-16 {
+  margin-bottom: 16px;
 }
 .formacao-lista li {
   color: #ff9933;
@@ -62,4 +64,13 @@
   background: linear-gradient(180deg, #ff9933 0%, #ff7722 100%);
   position: absolute;
   left: -36px;
+}
+
+@media (max-width: 769px) {
+  #formacao {
+    margin-bottom: 32px;
+  }
+  .formacao-lista li {
+    font-size: 0.75rem;
+  }
 }

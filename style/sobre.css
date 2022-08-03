@@ -1,16 +1,45 @@
 .sobre {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
 }
 
 .sobre-p {
+  position: relative;
   color: #0b0d0f;
   font-size: 1.125rem;
   font-family: "Inter", sans-serif;
   margin-bottom: 1rem;
   line-height: 1.5;
+  z-index: 1;
 }
 
 .sobre-img {
-  justify-self: end;
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 1024px) {
+  .sobre-p {
+    max-width: 60ch;
+  }
+  .sobre-img {
+    opacity: 0.5;
+  }
+  .sobre {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 769px) {
+  .sobre-img {
+    display: none;
+  }
+  .sobre {
+    grid-template-columns: 1fr;
+  }
+  .sobre-p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
 }

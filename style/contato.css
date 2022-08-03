@@ -1,7 +1,8 @@
 .contato {
-  width: 940px;
+  width: 100%;
+  max-width: 940px;
   margin: 0 auto;
-  padding-bottom: 64px;
+  padding: 0 20px 64px 20px;
   font-family: "Inter", sans-serif;
   color: #112233;
   font-size: 0.875rem;
