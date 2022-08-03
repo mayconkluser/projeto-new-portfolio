@@ -1,6 +1,7 @@
 .sobre {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 64px 20px 64px 20px;
   position: relative;
 }
 
@@ -17,6 +18,7 @@
 .sobre-img {
   position: absolute;
   right: 0;
+  bottom: 40px;
 }
 
 @media (max-width: 1024px) {
@@ -41,5 +43,9 @@
   .sobre-p {
     font-size: 1rem;
     max-width: 100%;
+  }
+
+  .sobre {
+    padding: 16px 20px 16px 20px;
   }
 }

@@ -125,3 +125,9 @@
     top: -7px;
   }
 }
+
+@media (max-width: 481px) {
+  .img-logo {
+    width: 160px;
+  }
+}

@@ -30,7 +30,6 @@ ul {
   font-size: 4rem;
   font-family: "IBM Plex Mono", monospace;
   text-transform: uppercase;
-  margin-bottom: 32px;
 }
 
 .divisor {
@@ -39,7 +38,7 @@ ul {
   max-width: 780px;
   height: 1px;
   background: #c3ced9;
-  margin: 64px auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
@@ -52,5 +51,14 @@ ul {
   .divisor {
     max-width: 580px;
     margin: 32px auto;
+  }
+}
+@media (max-width: 481px) {
+  .divisor {
+    max-width: 380px;
+  }
+  .titulo-h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
   }
 }

@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  margin-top: 64px;
+  padding: 64px 0 64px 0;
 }
 
 .cargo-dev,
@@ -81,5 +81,23 @@
   .cargo-dev-2 {
     display: block;
     padding-top: 8px;
+  }
+
+  .intro {
+    padding: 16px 20px 16px 20px;
+  }
+}
+@media (max-width: 481px) {
+  .img-dev {
+    width: 300px;
+  }
+  .cargo-dev {
+    font-size: 2rem;
+  }
+  .nome-dev {
+    font-size: 1rem;
+  }
+  .local-dev {
+    font-size: 0.875rem;
   }
 }

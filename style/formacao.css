@@ -1,9 +1,7 @@
 #formacao {
   background: #161b20;
   max-width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-bottom: 64px;
+  padding: 64px 0 64px 0;
 }
 
 .formacao-grid {
@@ -68,9 +66,14 @@
 
 @media (max-width: 769px) {
   #formacao {
-    margin-bottom: 32px;
+    background: #161b20;
+    max-width: 100%;
+    padding: 32px 0 32px 0;
   }
   .formacao-lista li {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
+  }
+  .formacao-grid {
+    grid-template-columns: 1fr;
   }
 }

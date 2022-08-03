@@ -9,6 +9,7 @@
 }
 .contato-h2 {
   text-align: center;
+  padding-top: 64px;
 }
 .contato-conteudo {
   display: grid;
@@ -90,4 +91,16 @@
   padding-top: 16px;
   display: inline-block;
   padding-right: 16px;
+}
+@media (max-width: 769px) {
+  .contato-h2 {
+    padding-top: 32px;
+  }
+}
+@media (max-width: 630px) {
+  .contato-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }

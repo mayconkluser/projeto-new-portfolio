@@ -27,3 +27,9 @@
   position: relative;
   bottom: -3px;
 }
+
+@media (max-width: 481px) {
+  .footer-container p img {
+    width: 100px;
+  }
+}
