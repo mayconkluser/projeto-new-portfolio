@@ -233,7 +233,7 @@ img {
 
 @media (max-width: 769px) {
   #portfolio {
-    padding: 16px 20px 16px 20px;
+    padding: 16px 0px 16px 0px;
   }
   .conteudo-slide {
     opacity: 0.9;
@@ -253,6 +253,8 @@ img {
 
   .ferramentas {
     gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .content-ferramentas {
     width: 30px;
@@ -279,13 +281,18 @@ img {
 
 @media (max-width: 481px) {
   .conteudo-slide {
-    position: relative;
-    bottom: 0;
-    height: 400px;
-    border-radius: 0 0 20px 20px;
-    border-top: 1px solid #ff9933;
+    opacity: 0.9;
   }
-  .box-content-slide img {
-    border-radius: 20px 20px 0 0;
+  .conteudo-slide h3 {
+    font-size: 0.875rem;
+  }
+
+  .conteudo-box p,
+  .conteudo-box p a {
+    font-size: 0.75rem;
+  }
+
+  .ferramentas-box {
+    display: none;
   }
 }
