@@ -2,7 +2,7 @@ import outsideClick from "./clicar-fora.js";
 export default function initMobileButton() {
   const menuButton = document.querySelector('[data-menu="button"]');
   const menuList = document.querySelector('[data-menu="list"]');
-  const eventos = ["click", "ontouchstart "];
+  const eventos = ["click"];
 
   if (menuButton) {
     function openMenu(event) {
@@ -12,7 +12,10 @@ export default function initMobileButton() {
         menuList.classList.remove("active");
         menuButton.classList.remove("active");
       });
+      console.log(menuButton);
     }
-    eventos.forEach((evento) => menuButton.addEventListener(evento, openMenu));
+    eventos.forEach((evento) => {
+      menuButton.addEventListener(evento, openMenu);
+    });
   }
 }
