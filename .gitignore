@@ -1,4 +1,4 @@
-PHPMailer
-enviar.php
+/PHPMailer
+*.php
 .vscode
 .git
