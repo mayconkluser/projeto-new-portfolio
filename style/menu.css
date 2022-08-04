@@ -59,6 +59,8 @@
 
   .img-logo {
     width: 160px;
+    position: relative;
+    top: -5px;
   }
   .navegacao ul li a::after {
     width: 100%;
