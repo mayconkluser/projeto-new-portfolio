@@ -2,7 +2,7 @@ import outsideClick from "./clicar-fora.js";
 export default function initMobileButton() {
   const menuButton = document.querySelector('[data-menu="button"]');
   const menuList = document.querySelector('[data-menu="list"]');
-  const eventos = ["click", "touchstart"];
+  const eventos = ["click", "ontouchstart "];
 
   if (menuButton) {
     function openMenu(event) {
