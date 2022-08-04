@@ -31,10 +31,10 @@
   <header>
     <div class="container header">
       <div class="img-logo"><img src="./img/logo-Menu.svg" alt="Esta é a logomarca da empresa Looma_Code."></div>
-      <nav id="nav" class="navegacao js-menu">
-        <button aria-label="Abrir Menu" id="btn-mobile" aria-controls="menu" aria-haspopup="true"
-          aria-expanded="false">Menu <span id="hamburguer"></span></button>
-        <ul id="menu" role="menu">
+      <nav data-nav="nav" class="navegacao js-menu" data-menu="suave">
+        <button aria-label="Abrir Menu" data-menu="button" aria-controls="menu" aria-haspopup="true"
+          aria-expanded="false">Menu <span data-menu="hamburguer"></span></button>
+        <ul data-menu="list" id="menu">
           <li><a href="#sobre">Sobre</a></li>
           <span class="ponto-menu"></span>
           <li><a href="#portfolio">Portfólio</a></li>

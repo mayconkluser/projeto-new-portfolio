@@ -1,18 +1,25 @@
-export default function initMobileButton() {}
-const btnMobile = document.getElementById("btn-mobile");
+import outsideClick from "./clicar-fora.js";
+export default function initMobileButton() {
+  const btnMobile = document.querySelector('[data-menu="button"]');
+  const listMenu = document.querySelector('[data-menu="list"]');
+  const eventos = ["click", "touchstart"];
 
-function toggleMenu(event) {
-  if (event.type === "touchstart") event.preventDefault();
-  const navegacao = document.getElementById("nav");
-  navegacao.classList.toggle("active");
-  const active = navegacao.classList.contains("active");
-  event.currentTarget.setAttribute("aria-expanded", active);
-  if (active) {
-    event.currentTarget.setAttribute("aria-label", "Fechar Menu");
-  } else {
-    event.currentTarget.setAttribute("aria-label", "Abrir Menu");
+  function openMenu(event) {
+    const nav = document.querySelector('[data-nav="nav"]');
+    const active = nav.classList.contains("active");
+    btnMobile.classList.add("active");
+    listMenu.classList.add("active");
+    event.currentTarget.setAttribute("aria-expanded", active);
+    if (active) {
+      event.currentTarget.setAttribute("aria-label", "Fechar Menu");
+    } else {
+      event.currentTarget.setAttribute("aria-label", "Abrir Menu");
+    }
+    outsideClick(listMenu, eventos, () => {
+      btnMobile.classList.remove("active");
+      listMenu.classList.remove("active");
+    });
   }
+  btnMobile.addEventListener("click", openMenu);
+  btnMobile.addEventListener("touchstart", openMenu);
 }
-
-btnMobile.addEventListener("click", toggleMenu);
-btnMobile.addEventListener("touchstart", toggleMenu);
