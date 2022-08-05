@@ -97,10 +97,15 @@
     padding-top: 32px;
   }
 }
+
 @media (max-width: 630px) {
   .contato-conteudo {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+  .form {
+    border-right: none;
+    padding-right: 0;
   }
 }
