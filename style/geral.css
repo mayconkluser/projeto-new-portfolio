@@ -90,6 +90,7 @@ ul {
   #btnTop {
     bottom: 0px;
     right: 0px;
+    opacity: 0;
   }
   #btnTop:hover {
     opacity: 0;
