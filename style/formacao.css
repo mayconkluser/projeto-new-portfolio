@@ -76,4 +76,7 @@
   .formacao-grid {
     grid-template-columns: 1fr;
   }
+  .box1 {
+    grid-row: 1;
+  }
 }
