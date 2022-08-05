@@ -64,6 +64,9 @@ ul {
 }
 
 @media (max-width: 769px) {
+  #btnTop:hover {
+    opacity: 0.2;
+  }
   #btnTop {
     opacity: 0.2;
     right: 10px;

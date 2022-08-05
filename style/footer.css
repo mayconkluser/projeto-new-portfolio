@@ -9,27 +9,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.75rem;
-}
-
-.footer-container p img {
-  width: 130px;
-}
-
-.footer-container p {
-  display: flex;
-  position: relative;
-  gap: 6px;
-  align-items: flex-end;
-}
-
-.footer-container p span {
-  position: relative;
-  bottom: -3px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 481px) {
-  .footer-container p img {
-    width: 100px;
+  .footer-container {
+    font-size: 0.75rem;
   }
 }
